@@ -1,0 +1,54 @@
+/*选中所有的标签和所有的伪元素*/
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /*清除点击时的高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI",sans-serif; /*移动端默认的字体, 叫做无衬线字体*/
+  color: #333;
+  background-color: rgb(234,234,235);
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+input,
+textarea{
+  border:none;
+  outline: none;
+  resize: none;
+  /*清除元素的外观*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.clearFix::before,
+.clearFix::after{
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
+/*使用精灵图的公共样式*/
+/*选中以icon开头的*/
+//[class^="icon"]{
+//  background-image: url("../images/sprites.png");
+//  background-repeat: no-repeat;
+//  -webkit-background-size: 200px 200px;
+//  background-size: 200px 200px;
+//}
+
+
+/*版心*/

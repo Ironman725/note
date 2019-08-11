@@ -1,0 +1,16 @@
+.Mixin(@index)when (@index > 0){
+  @media(min-width: extract(@deviceList,@index)) {
+    html{
+      font-size:extract(@deviceList,@index)/@psdWidth*@baseFontSize;
+    }
+  }
+  .Mixin(@index - 1);
+}
+//.Mixin(@index) when(index>0){
+//  @media(min-width:extract(@deviceList,@index)){
+//    html{
+//      font-size:extract(@deviceList,@index)/@psdWidth*@baseFontSize;
+//    }
+//  }
+//  .Mixin(@index-1);
+//}
